@@ -1,0 +1,59 @@
+body{
+background-color: rgb(0, 0, 0);
+}
+.titulo-principal{
+  /*espaciamiento interno de la izq*/
+  padding-left: 30px;
+  color: white;
+  text-decoration: none;
+  text-decoration: underline;
+}
+
+  img {
+   width: 100%;
+
+  }
+  div {
+    width: 100%; /* */
+    height: 300px;
+    margin: auto;
+  }
+  .principal{
+    background: #cccccc;
+    padding: 15px;
+  }
+  
+#titulo-centralizado{
+  /*texto centrado*/
+ text-align: center;
+}
+p {
+    text-align: center;
+  }
+em strong{
+    /*color de la letra*/
+    color: orangered;
+  }
+#mision{
+    font-size: 20px;
+  } 
+  .diferenciales{
+    padding: 30px;
+  }
+  h3{
+    color: white;
+    text-align: center;
+    font-size: 25px; }
+.items{
+  font-style: italic;
+  color: rgb(83, 74, 74);
+ }
+ ul{
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin-right: 15%;
+}
+ .imagenDiferencial{
+  width: 50%;
+ }

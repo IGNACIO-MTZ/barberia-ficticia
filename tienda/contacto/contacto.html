@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--este codio reset de css es para eliminar los estilos de google por defecto-->
+    <link rel="stylesheet" href="/reset.css" />
+    <link rel="stylesheet" href="/tienda/productos/style.css" />
+    <link rel="icon" href="/tienda/productos/imagenes/logo-blanco.png" />
+    <title>Contacto</title>
+  </head>
+
+  <body>
+    <!--encabezado de pagina, logo -->
+    <header>
+      <div class="caja">
+        <h1><img src="/tienda/productos/imagenes/logo.png" alt="logo" /></h1>
+        <nav>
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/tienda/productos/productos.html">Productos</a></li>
+            <li><a href="/tienda/contacto/contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!--cuerpo de pagina-->
+    <main>
+      <!--es una formula en donde agregamos datos, textos-->
+      <form>
+        <!--etiqueta de contenido/ y agregamos el 
+            id de input para decirle que ahi es-->
+        <label for="nombreapellidos">Nombre y Apellido</label>
+        <!--campo para incertar textos/ siembre se le agrega id-->
+        <!--requiered para que aparesca como requerido u obligatorio-->
+        <!--placeholder para poner un gia-->
+        <input type="text" id="nombreapellidos" class="input-padron" required />
+        <label for="correoelectronico">Correo Electronico</label>
+        <input
+          type="email"
+          id="correoelectronico"
+          class="input-padron"
+          required
+          placeholder="correo@hotmail.com"
+        />
+        <label for="telefono">Telefono</label>
+        <input
+          type="tel"
+          id="telefono"
+          class="input-padron"
+          required
+          placeholder="+ 52 000 0000 000"
+        />
+        <!--se agrega un campo extenso para texto, for va con id-->
+        <label for="mensaje">Mensaje</label>
+        <!--columna 70,lineas o filas 10 para textos -->
+        <textarea
+          id="mensaje"
+          cols="70"
+          rows="10"
+          class="input-padron"
+        ></textarea>
+        <!--==============================================-->
+        <!--le damos la indicacion que todo lo de adentro es uno mismo-->
+        <fieldset>
+          <!--siempre van en formulariosa, ejemplos, 
+            pagos con tarjetas de credito, pagina amazon, spoty para pagar-->
+          <legend>¿Como le gustaria que lo contactemos?</legend>
+          <label for="radio-email">
+            <!--formulario se seleccion podemos poner
+
+            <input
+              type="radio"
+              name="contacto"
+              value="email"
+              id="radio-email"
+              required
+            />Email</label
+          >
+
+          <label for="radio-telefono">
+            <input
+              type="radio"
+              name="contacto"
+              value="telefono"
+              id="radio-telefono"
+              required
+            />Telefono</label
+          >
+
+          <label for="radio-whatsapp"
+            ><input
+              type="radio"
+              name="contacto"
+              value="whatsapp"
+              id="radio-whatsapp"
+              required
+              checked
+            />WatsApp</label
+          >
+        </fieldset>
+        <!--referencia a mismos datos-->
+        <fieldset>
+          <!--etiqueta de contenido-->
+          <legend>¿En cual horario prefiere ser atendido?</legend>
+          <select>
+            <option>Mañana</option>
+            <option>Tarde</option>
+            <option>Noche</option>
+          </select>
+        </fieldset>
+        <!--tambien podemos utilizar label y dentro un imput-->
+        <label class="checkbox"
+          ><input type="checkbox" name="" id="" checked />¿Le gustraria recibir
+          novedades de la Barberia?</label
+        >
+        <!--===========================================-->
+        <!--envia "submit" los datos a un lugar,
+         tambien podemos especificar que 
+         nombre ponerle con value-->
+        <input type="submit" value="Enviar Formulario" class="enviar" />
+      </form>
+      <!--tablas-->
+      <table>
+        <!--encabezado de la tabla-->
+        <thead>
+          <!--lineas de las tablas/filas-->
+          <tr>
+            <!--celdas/columnas-->
+            <th>Dia</th>
+            <th>Horario</th>
+          </tr>
+        </thead>
+        <!--cuerpo de la tabla-->
+        <tbody>
+          <!--lineas de las tablas/filas-->
+          <tr>
+            <!--celdas/columnas-->
+            <td>Lunes</td>
+            <td>08h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Miercoles</td>
+            <td>08h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Viernes</td>
+            <td>08h ~ 20h</td>
+          </tr>
+        </tbody>
+        <!--pie de tabla-->
+        <tfoot></tfoot>
+      </table>
+    </main>
+    <!--pie de pagina-->
+    <footer>
+      <img src="/tienda/productos/imagenes/logo-blanco.png" alt="logo-blanco" />
+      <p class="pie">&copy Copyright Barberia 2023</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,402 @@
+body {
+  font-family: "Montserrat", sans-serif;
+}
+header {
+  /*Se agrega el color de fondo en header*/
+  background-color: #bbbbbb;
+  /**/
+  padding: 20px 0;
+}
+
+.caja {
+  /*el ancho de la caja adentro de div*/
+  width: 940px;
+  /*aqui le decimos que es el
+    75% de la pantalla*/
+  position: relative;
+  margin: 0 auto;
+}
+
+nav {
+  /*posicion inicial o absoluta*/
+  position: absolute;
+  /*top baja y ring*/
+  top: 85px;
+  right: 0;
+}
+
+nav li {
+  /*se le da la indicacion de que ocupe el 
+   tamanho del contenido*/
+  display: inline;
+  /*estaciado interno el primero ariba, derecha
+    abajo, izquierda*/
+  margin: 0 0 0 10px;
+}
+
+nav a {
+  /*texto a mayuscula*/
+  text-transform: uppercase;
+  /* color de texto*/
+  color: #000000;
+  /*texto en negritas*/
+  font-weight: bold;
+  /*tamanho de la letra*/
+  font-size: 22px;
+  /*vamos a quitar el subrrayado del linlk del texto*/
+  text-decoration: none /*<== ni una*/;
+}
+
+/*propiedad hover es la que captura el movimiento del maus
+     captura movimientos del usuario que esta moviendo*/
+nav a:hover {
+  color: #c78c19;
+  /*cuando el cursor este ensima que muestre subrayado*/
+  text-decoration: underline;
+}
+
+/*usamos el tamanho de 940px de las pantallas */
+.productos {
+  width: 940px;
+  /*margen superio e inferior cero, a toda la lista 
+  de productos queremos que ocupa 940 px en total y laterales en forma automatica */
+  margin: 0 auto;
+  /*espacio de arriba para abajo*/
+  padding: 30px;
+}
+
+.productos li {
+  /*elimina los bloques por defecto haciendo 
+    que utilicen solo el espacio, por eso hace el efecto de filas en 3*/
+  display: inline-block;
+  /*texto alineado*/
+  text-align: center;
+  /*le indicamos que ocupe el 30% del espacio*/
+  width: 30%;
+  /*le damos ka indicacion de que los item sean vertical*/
+  vertical-align: top;
+  /*espacio entre los 3, el primero es vertical, 
+    el otro laterales*/
+  margin: 0 1.5%;
+  /*espacio alrrededor de un elemento*/
+  padding: 30px 20px;
+  /*calcula el tamanho del elemento sin pasarse*/
+  box-sizing: border-box;
+  /*======================================*/
+  /*agregamos color al borde */
+  border-color: black;
+  /*hancho del borde*/
+  border-width: 2px;
+  /*se hace el borde solido para que aparesca 
+    ya el borde en negro*/
+  border-style: solid;
+  /*=== tambien podemos simplificar etos 3 codigos
+    agregandolos como parametros  ya que los 3 son bordes
+    quedaria de la siguiente manera
+    border: 2px solid #000000 
+    ===========================================*/
+  /*===redondeamos el borde====*/
+  border-radius: 10px;
+  /*=======pero tambien se puede con cada una de las esquinas=========
+      - borde superior izq
+        border-top-left-radius:20px ;
+      - borde superior derecho
+        border-top-right-radius:25px;
+      - borde inferior derecho
+        border-bottom-right-radius:25px;
+      - borde inferior izq 
+        border-bottom-left-radius:25px; 
+         ******
+   tambisn asi ----> border-radius: 10px 10px 10px 10px;
+*/
+}
+
+.productos li:hover {
+  /*al pasar el maus cambia de color los textos*/
+  color: rgb(8, 138, 127);
+  /*al pasar el maus cambia de color el borde*/
+  border-color: #d19418;
+}
+
+/*al hacer click, cambia de color el borde, 
+    capturando el click*/
+.productos li:active {
+  border-color: #088c19;
+  color: #3bc75a;
+}
+
+.productos h2 {
+  /*tamanho de la letra*/
+  font-size: 30px;
+  /*se le da forma de negrita a al H2*/
+  font-weight: bold;
+}
+
+/*selector que llegue hasta el nivel del h2, 
+    para que afecte h2 almomento de pasar el maus */
+.productos li:hover h2 {
+  /*al pasar el clik cambia de tamanho*/
+  font-size: 33px;
+}
+
+.producto-descripcion {
+  /*tamanho de letra*/
+  font-size: 18px;
+}
+
+.producto-precio {
+  font-size: 20px;
+  /*letras negritas*/
+  font-weight: bold;
+  /*separar 10px de descripcion el precio*/
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  /*se agrega un fondo con una imagen*/
+  background: url(/productos/imagenes/bg.jpg);
+  padding: 40px;
+}
+
+.pie {
+  /*color de letra*/
+  color: black;
+  /*subimos el texto de abajo para arriba*/
+  margin: 20px;
+  /*tamanho de la letra*/
+  font-size: 13px;
+}
+
+form {
+  margin: 40px 0 0 40px;
+}
+
+form label,
+form legend {
+  /*hace que se brinque
+     a la siguiente linea el contenido*/
+  display: block;
+  font-size: 20px;
+  /*espacion entre nombre 
+    y textos para introducir*/
+  margin: 0 0 10px;
+}
+
+.input-padron {
+  display: block;
+  margin: 0 0 20px;
+  /*ancho del cuadro donde
+    incertaremos el texto*/
+  padding: 10px 25px;
+  width: 50%;
+}
+
+.checkbox {
+  margin: 20px 0;
+}
+
+.enviar {
+  width: 40%;
+  padding: 15px 0px;
+  margin: 20px;
+  font-size: 18px;
+  /*letra negrita*/
+  font-weight: bold;
+  color: white;
+  background: orange;
+  /*ningun borde*/
+  border: none;
+  /*puntas redondeadas*/
+  border-radius: 5px;
+  /*tiempo de transicion, que cambie de color de fondo y all va 
+    junto co transform:scale*/
+  transition: 1s all;
+  /*cambio de cursor manita con dedo apuntando*/
+  cursor: pointer;
+}
+
+.enviar:hover {
+  background: darkorange;
+  /*hace que el texto aumente cuando el maus se pocicione
+    en el lugar*/
+  /*rotate==>hace giros-rotacion con los elementos(son grados)*/
+  transform: scale(1.2) rotate(1.2deg);
+}
+
+/*espaciamineot superior e inderior a la tabla
+    y a los laterales*/
+table {
+  margin: 40px 40px;
+}
+
+/*encabezado de la tabla*/
+thead {
+  background: #555555;
+  color: white;
+  /*letra negrita*/
+  font-weight: bold;
+}
+/*dibujar las lineas, grosor de 1px, solido, negro*/
+td,
+th {
+  border: 1px solid black;
+  /*espaciamiento interno sup e inferior 8, a los costados 15*/
+  padding: 8px 15px;
+}
+/*aqui inicia el css para nuestra home*/
+.banner {
+  width: 100%;
+}
+.cuerpo {
+  width: 100%;
+  margin: 0 0;
+}
+.titulo-principal {
+  text-align: center;
+  /*el tamanho de la letra 2 dos mayor 
+    del que le da el navegador*/
+  font-size: 2em;
+  /*le damos la separacion con 1*/
+  margin: 0 0 0 1em;
+  /*cualquier configuracion que venga despues del titulo
+    de la izquierda que la limpie*/
+  clear: left;
+  padding: 0 0 20px 0;
+  /*efecto neon*/
+  /* text-shadow: 2px 2px 10px blue;*/
+}
+/*en negritas la primera letra de los titulos*/
+.titulo-principal:first-letter {
+  font-weight: bold;
+}
+/*primera linea de los parrafosn en negrita*/
+p:first-line {
+  font-weight: bold;
+}
+.principal p {
+  /*aqui es la seccion con el p el cual le
+    damos un espacio por defecto del navegador*/
+  margin: 0 0 1em;
+}
+.principal strong {
+  /*ponemos en negritas nuestra mision*/
+  font-weight: bold;
+}
+.principal em {
+  /*las cursivas*/
+  font-style: italic;
+}
+.utencilios {
+  /*float/ flotar*/
+  width: 160px;
+  /*pocicionar a la izquierda la imagen */
+  float: left;
+  margin: 0 20px 20px 0;
+  padding: 0 0 0 45px;
+}
+.mapa {
+  padding: 3em 0;
+  /*
+    45 grados
+    background: linear-gradient(45deg, orange ,blue, red,black);
+    90 grados
+    background: linear-gradient(90deg, orange ,blue, red,black);
+    
+    background: linear-gradient(45deg, orange ,blue, red,black);*/
+  background: linear-gradient(#fefefe, #888888);
+}
+.mapa p {
+  margin: 0 0 2em;
+  text-align: center;
+}
+.mapa-contenidos {
+  width: 940px;
+  margin: 0 auto;
+}
+.diferenciales {
+  padding: 3em 0;
+  background: #888888;
+  width: 100%;
+  max-width: 0 auto;
+}
+.contenido-diferenciales {
+  width: 640px;
+  margin: 0 auto;
+}
+.lista-diferenciales {
+  width: 40%;
+  /*para que la imagen se pocicione a un lado*/
+  display: inline-block;
+  /*el texto en la parte superior*/
+  vertical-align: top;
+}
+/*negrita la lista---primer hinjo- el primero de la lista*/
+.items:first-child {
+  font-weight: bold;
+  /*
+    ====ultimi hijo====
+    .items:last-child
+    ====se escoje en numero cual pintaremos en negrito===
+    .items:nth-child(1)
+    */
+}
+.items {
+  /*para que la letra tenga un tamanho*/
+  line-height: 1.5;
+}
+.items:before {
+  content: "★";
+}
+.imagen-diferenciales {
+  width: 50%;
+  transition: 400ms;
+  /*sombra a una imagen*/
+  box-shadow: 10px 10px 30px 15px black;
+}
+/*la opacidad al momento de pasar el maus cambia de color*/
+.imagen-diferenciales:hover {
+  opacity: 0.3;
+}
+.video {
+  width: 560px;
+  /*automatico a la pagina los laterales*/
+  margin: 1em auto;
+}
+.principal {
+  padding: 3em;
+  background: #fefefe;
+}
+
+footer {
+  background-color: #bbbbbb;
+}
+/*acomodo en telefono*/
+@media (max-width: 480px) {
+  h1 {
+    text-align: center;
+  }
+  nav {
+    position: static;
+  }
+  .caja,
+  .principal,
+  .mapa-contenidos,
+  .contenido-diferenciales,
+  .video {
+    width: auto;
+  }
+  .lista-diferenciales,
+  .imagen-diferenciales {
+    width: 100%;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+}
