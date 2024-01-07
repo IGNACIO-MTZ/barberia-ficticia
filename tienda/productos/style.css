@@ -244,10 +244,6 @@ th {
   /*espaciamiento interno sup e inferior 8, a los costados 15*/
   padding: 8px 15px;
 }
-/*aqui inicia el css para nuestra home*/
-.banner {
-  width: 100%;
-}
 .cuerpo {
   width: 100%;
   margin: 0 0;
